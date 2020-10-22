@@ -1,8 +1,6 @@
 ---
 layout: post
-tile: Kaldi Turorial - Computing Fbank and MFCC Features for Single Utterance
 ---
-## Kaldi Turorial - Computing Fbank and MFCC Features for Single Utterance
 
 Suppose you have an utterance audio file _robin.flac_ and want to compute Fbank and MFCC features based on it.
 
