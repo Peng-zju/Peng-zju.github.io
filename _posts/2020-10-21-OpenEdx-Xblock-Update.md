@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
+tile: How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
 ---
 
 ## How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
