@@ -1,8 +1,12 @@
 ---
 published: false
 ---
+---
+layout: post
+title: How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
+---
 
-## Hwo to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
+## How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
 
 When you install an Xblock A and this error occurs:
 > Error: render_django_template() got an unexpected keyword argument 'i18n_service'
@@ -21,15 +25,19 @@ To fix the this error, you need to update the xblock-utils Xblock in your server
 ### 3. Install new version, from [Lawrence McDaniel Blog](https://blog.lawrencemcdaniel.com/how-to-install-an-xblock/)
  
    `$ cd ~`
+   
 	  `$ git clone https://github.com/edx/xblock-utils.git`
 	  
  #Change the folder ownership and group to edxapp
 	  `$ sudo chown -R edxapp xblock-in-video-quiz`
+      
 	  `$ sudo chgrp -R edxapp xblock-in-video-quiz`
 	  
 #To install the xblock: 
 `$ sudo -H -u edxapp bash`
+
 `$ source /edx/app/edxapp/edxapp_env `
+
 `$ /edx/bin/pip.edxapp install ~/xblock-utils`
  
 ### 4. Restart servers
