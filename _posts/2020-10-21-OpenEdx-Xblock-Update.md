@@ -1,5 +1,4 @@
 ---
-published: true
 layout: post
 title: How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
 ---
@@ -13,7 +12,8 @@ It means that Xblock A depends on another Xblock called [*xblock-utils*](https:/
 
 To fix the this error, you need to update the xblock-utils Xblock in your server.
 
- ### 1. List the current version of xblock-util
+### 1. List the current version of xblock-util
+
    `$ /edx/bin/pip.edxapp list | grep xblock-utils`
  
 ### 2. Uninstall current version if version < 1.1.1
@@ -24,14 +24,16 @@ To fix the this error, you need to update the xblock-utils Xblock in your server
  
    `$ cd ~`
    
-	  `$ git clone https://github.com/edx/xblock-utils.git`
+   `$ git clone https://github.com/edx/xblock-utils.git`
 	  
  #Change the folder ownership and group to edxapp
-	  `$ sudo chown -R edxapp xblock-in-video-quiz`
-      
-	  `$ sudo chgrp -R edxapp xblock-in-video-quiz`
+ 
+ `$ sudo chown -R edxapp xblock-in-video-quiz`
+ 
+ `$ sudo chgrp -R edxapp xblock-in-video-quiz`
 	  
 #To install the xblock: 
+
 `$ sudo -H -u edxapp bash`
 
 `$ source /edx/app/edxapp/edxapp_env `
@@ -40,11 +42,14 @@ To fix the this error, you need to update the xblock-utils Xblock in your server
  
 ### 4. Restart servers
 -   LMS 
+
 `$ sudo /edx/bin/supervisorctl restart lms`
 -   CMS 
+
 `$ sudo /edx/bin/supervisorctl restart cms`
     
 -   Workers 
+
 `$ sudo /edx/bin/supervisorctl restart edxapp_worker:`
 
 If the above command will not work, try rebooting the server.
@@ -53,5 +58,6 @@ Now you can proceed with your routine for adding a Xblock in Studio by adding th
 
 ### Reference
 https://openedx.atlassian.net/wiki/spaces/COMM/pages/753532962/Native+XBlocks+Morning+Session
+
 https://github.com/edx/xblock-utils/pull/49
 
