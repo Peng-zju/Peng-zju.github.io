@@ -1,9 +1,6 @@
 ---
 layout: post
-tile: How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
 ---
-
-## How to Update OpenEdx Xblock and Solve Error: render_django_template()  'i18n_service'
 
 When you install an Xblock A and this error occurs:
 > Error: render_django_template() got an unexpected keyword argument 'i18n_service'
