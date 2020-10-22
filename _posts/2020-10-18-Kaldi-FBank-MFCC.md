@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Kaldi Turorial - Computing Fbank and MFCC Features for Single Utterance
 
