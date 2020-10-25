@@ -8,10 +8,14 @@ There are two binaries in `kaldi/src/featbin/` you can use:
 - **compute-fbank-feats** [options...] \<wav-rspecifier> \<feats-wspecifier>
 - **compute-mfcc-feats** [options...] \<wav-rspecifier> \<feats-wspecifier>
 
+<br>
+
 ### Step 1 - Add binary to PATH
 Execute `path.sh` from any exmaple directory so that the above two binaries are in PATH.
   
 `$ source kaldi/egs/mini_librispeech/s5/path.sh`
+
+<br>
 
 ### Step 2 - Prepare wav.scp 
 wav.scp is a [Kaldi script file](https://kaldi-asr.org/doc/io.html#io_sec_scp) that consists of mutiple lines of *\<key> \<rxfilename> pairs.
@@ -29,6 +33,8 @@ If audio is in other format, like *flac*, then \<rxfilename> is a command  follo
 In order to Fbank and MFCC accepts wav format. So modify the wav.scp by adding a [sox](http://sox.sourceforge.net/) pipe, saving this line to a seperate file to : `kaldi/egs/mini_librispeech/s5/wav_test.scp`
 
 >1088-134315-0000  flac -d -s -c ./corpus/LibriSpeech/train-clean-5/1088/134315/1088-134315-0000.flac \| sox -t wav - -t wav - \|
+
+<br>
 
 ### Step 3 - Compute Fbank
 Use *1088-134315-0000.flac* from the mini_librispeech as an example. Output the feature to stdout. 
@@ -48,6 +54,8 @@ Here we specify the number of fiterbanks to be 40.
   
 `ark, t` means write archine in text instead of binary and `-` means stdout. See [Kaldi I/O mechanisms](https://kaldi-asr.org/doc/io.html)
 
+<br>
+
 ### Step 4 - Compute MFCC
 
 To see avaibable options for compute-fbank-feats, type: 
@@ -61,6 +69,8 @@ Here we keep all options to default
 >1088-134315-0000  [
   15.80592 -19.65983 -44.14267 -10.36022 -21.32767 -3.718761 -16.35019 -2.041183 1.383831 -6.504814 -15.53979 4.017059 -1.488521
   15.80938 -19.18601 -36.05476 1.974784 -16.47062 9.139902 -17.07959 -2.513923 12.35208 0.3189384 -16.05096 -10.61343 -5.74498 .....
+
+<br>
 
 ### Additionals
 Use `feat-to-len` to map utterance-id to utterance length in frames
