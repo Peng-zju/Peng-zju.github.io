@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a graduate student at Simon Fraser University and Zhejiang University. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I am interested in building automatic pronounciation scoring system using Kaldi. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[pengy AT sfu.ca](mailto:email@domain.com)
